@@ -1,0 +1,19 @@
+<html ng-app="">
+    <head>
+        <title>Angular</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    </head>
+    <body>
+        <input type="text" ng-model="name">
+        <div ng-bind="name"></div>
+        hello 10*10 = {{10*10}} {{name}}
+        
+        <div ng-init="language='English'">
+            {{language}}
+        </div>
+        
+        <input type="text" ng-model="language">
+    </body>
+</html>
