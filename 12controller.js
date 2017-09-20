@@ -3,12 +3,24 @@ var app = angular.module('mainApp', ['ngRoute']);
 app.config(function($routeProvider){
     $routeProvider
     .when('/', {
-        template: 'Welcome'
+        templateUrl: '12login.html'
     })
-    .when('/1', {
-        template: 'Welcome 1'
+    .when('/dashboard', {
+        template: '12dashboard.html'
     })
     .otherwise({
         redirectTo: '/'
     });
+});
+
+app.controller('loginCtrl', function($scope, $location){
+    
+    $scope.submit = function(){
+      var uname =  $scope.username;
+      var password = $scope.password;
+      if($scope.username == 'admin' && $scope.password == 'password'){
+          $location.path('/dashboard');
+      }
+    };
+    
 });
